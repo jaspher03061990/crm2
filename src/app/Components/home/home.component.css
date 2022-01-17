@@ -1,5 +1,5 @@
 .nav-item {
-    min-width: 150px;
+    min-width: 200px;
     color: #ffffff;
     height: 65px;
     font-size: 20px;
@@ -10,5 +10,31 @@
     font-size: 18px;
 }
 .nav-item.green {
-    background-color: #8bc34a;
+    background-color: #60b300;
+}
+.nav-item.orange {
+    background-color: #ff3c00;
+}
+.record-header {
+    color: #0078ca;
+    font-size: 16px;
+    padding-left: 15px;
+    font-weight: 500;
+}
+.record-data {
+    font-size: 14px;
+    background-color: #cfd6fb;
+    padding-left: 15px;
+}
+.record-data:nth-child(even) {
+    background-color: #ffffff;
+}
+.width_33 {
+    width: 33%;
+}
+.width_34 {
+    width: 34%;
+}
+.section .bg-white {
+    box-shadow: 1px 1px 6px #9e9e9e;
 }

@@ -27,7 +27,7 @@ dtOptions: any = {};
   displayedColumns: string[] = ['id', 'title','firstName','lastName','gender','suffix','dateOfBirth','action','edit'];
   ngOnInit(): void {
     this.getList();
-    alert("sort")
+    //alert("sort")
     
     
   }

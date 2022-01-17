@@ -18,18 +18,18 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
  var userRoles = route.data['permittedRoles'] as Array<string>
- alert("came to activated route")
+ //alert("came to activated route")
  console.log(userRoles)
  if(userRoles!=null)
  {
-   alert("has user roles")
+   //alert("has user roles")
       if(this.service.roleMatch(userRoles))
         {
           return true;
         }
       else
         {
-          alert("role didnt match")
+          //alert("role didnt match")
           this.router.navigate(["login"])
 
           return false;

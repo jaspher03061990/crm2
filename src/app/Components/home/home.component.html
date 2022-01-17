@@ -8,5 +8,51 @@
         <mat-icon>person</mat-icon>
       </div>
     </li>
+    <li class="nav-item orange ml-4">
+      <div class="float-left">
+    <a class="nav-link" aria-current="page" routerLink="/members" href="#">10</a>
+    <div class="ml-2">Families</div>
+    </div>
+    <div class="float-right mt-3 mr-2">
+      <mat-icon>people</mat-icon>
+    </div>
+  </li>
     
   </ul>
+<div class="col-lg-12 pb-5">
+    <div class="row section pl-4 pr-4">
+  <div class="col-lg-12 mt-5 bg-white rounded pb-3" style="margin: 0 auto;">
+    <h2 class="heading-md">Birthdays</h2>
+    <div class="d-flex justify-content-around bg-white record-header pt-4 pb-4 mb-2">
+      <div class="width_33">Name</div>
+      <div class="width_33">Contact Number</div>
+      <div class="width_34">Email</div>
+    </div>
+    <div class="records">
+    <div class="d-flex record-data pt-3 pb-3" *ngFor="let record of [1,2,3,4,5]">
+      <div class="width_33">Alex</div>
+      <div class="width_33">9944557788</div>
+      <div class="width_34">Alex@gmail.com</div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="row section pl-4 pr-4">
+  <div class="col-lg-12 mt-5 bg-white rounded pb-3" style="margin: 0 auto;">
+    <h2 class="heading-md">Anniversaries</h2>
+    <div class="d-flex justify-content-around bg-white record-header pt-4 pb-4 mb-2">
+      <div class="width_33">Name</div>
+      <div class="width_33">Contact Number</div>
+      <div class="width_34">Email</div>
+    </div>
+    <div class="records">
+    <div class="d-flex record-data pt-3 pb-3" *ngFor="let record of [1,2,3,4,5]">
+      <div class="width_33">Mr.&Mrs.Alex</div>
+      <div class="width_33">9944557788</div>
+      <div class="width_34">Alex@gmail.com</div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
