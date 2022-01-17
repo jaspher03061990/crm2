@@ -1,0 +1,14 @@
+.nav-item {
+    min-width: 150px;
+    color: #ffffff;
+    height: 65px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.nav-item a {
+    color: #ffffff;
+    font-size: 18px;
+}
+.nav-item.green {
+    background-color: #8bc34a;
+}

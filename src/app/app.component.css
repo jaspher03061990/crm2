@@ -1,0 +1,24 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .user-icon {
+      border: 2px solid #ffffff;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      cursor: pointer;
+  }
+  .display-user-name {
+      font-size: 20px;
+      font-weight: lighter;
+      line-height: 25px;
+  }
+  .disaplay-user-role {
+      font-size: 13px;
+      line-height: 18px;
+      margin-left: 2px;
+  }
+  .main-header .mat-toolbar button.menu-icon{
+      width: auto;
+  }

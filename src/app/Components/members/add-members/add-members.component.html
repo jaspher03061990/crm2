@@ -1,0 +1,223 @@
+<div class="container-fluid pb-5">
+  <h1 class="main-heading">Member Profile</h1>
+    <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+      <div class="col-lg-12 p-0">
+        <div class="section mb-5">
+          <h4 class="sub-heading">Personal Information:</h4>
+        <div class="row form-group">
+          <div class="col-lg-4">
+            
+              <label>Name</label>
+              <input type="text" class="form-control" formControlName="FirstName">
+          
+          </div>
+          <div class="col-lg-4">
+            
+              <label>Middle Name</label>
+              <input type="text" class="form-control" formControlName="MiddleName">
+          </div>
+          <div class="col-lg-4">
+              <label>Last Name</label>
+              <input type="text" class="form-control" formControlName="LastName">
+          </div>
+        </div>
+        <div class="row form-group mt-5">
+          <div class="col-lg-4">
+              <label>Gender</label>
+              <div class="mt-3">
+        <mat-radio-group aria-label="Select an option"
+         formControlName="Gender" color="primary">
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female" class="ml-5">Female</mat-radio-button>
+          </mat-radio-group>
+        </div>
+          </div>
+          <div class="col-lg-4">
+            <mat-form-field>
+              <label>Title</label>
+              <mat-select formControlName="Title" float="right">
+                <mat-option *ngFor="let title of Titles" [value]="title.value">
+                  {{title.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field >
+          </div>
+          <div class="col-lg-4">
+            <label>Date Of Birth</label>
+            <div>
+              <mat-form-field>
+             
+                <input matInput type="date" formControlName="DateOfBirth" (change)="age()">
+                
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section mb-5">
+        <h4 class="sub-heading">Family Information:</h4>
+      <div class="row form-group">
+        <div class="col-lg-4">
+          <mat-form-field>
+            <label>Family Role</label>
+            <mat-select formControlName="Title">
+              <mat-option [value]="'Spouse'">Spouse</mat-option>
+              <mat-option [value]="'Head of Household'">Head of Household</mat-option>
+              <mat-option [value]="'Child'">Child</mat-option>
+              <mat-option [value]="'Other Relative'">Other Relative</mat-option>
+              <mat-option [value]="'Non Relative'">Non Relative</mat-option>
+            </mat-select>
+          </mat-form-field >
+        </div>
+        <div class="col-lg-6">
+          <mat-form-field>
+            <label>Family</label>
+            <mat-select formControlName="Title">
+              <mat-option [value]="'Alex'">Alex</mat-option>
+              <mat-option [value]="'Felix'">Felix</mat-option>
+              <mat-option [value]="'Memon'">Memon</mat-option>
+            </mat-select>
+          </mat-form-field >
+        </div>
+      </div>
+    </div>
+        <!-- <div class="row">
+          <div class="col-lg-12">
+            <hr>
+          </div>
+        </div> -->
+        <div class="section mb-5">
+          <h4 class="sub-heading">Contact Information:</h4>
+        <div class="row form-group mt-5">
+          <div class="col-lg-4">
+              <label>Door Number/Flat Number</label>
+              <input type="number" class="form-control" formControlName="DoorNo">
+          </div>
+          <div class="col-lg-4">
+              <label>Road/Street Name</label>
+              <input type="text" class="form-control" formControlName="RoadName">
+          </div>
+          <div class="col-lg-4">
+              <label>Address</label>
+              <input type="text" class="form-control" formControlName="Address">
+          </div>
+        </div>
+        <div class="row form-group mt-5">
+          <div class="col-lg-4">
+            <label>Pin Code</label>
+            <input type="number" class="form-control" formControlName="PinCode">
+        </div>
+        <div class="col-lg-4">
+          <label>District</label>
+          <input type="text" class="form-control" formControlName="District">
+      </div>
+      <div class="col-lg-4">
+        <label>City/Town</label>
+        <input type="text" class="form-control" formControlName="City">
+    </div>
+    </div>
+    <div class="row form-group mt-5">
+    <div class="col-lg-4">
+      <label>State</label>
+      <input type="text" class="form-control" formControlName="State">
+  </div>
+  <div class="col-lg-4">
+    <label>Home Phone</label>
+    <input type="number" class="form-control" formControlName="HomePhone">
+</div>
+<div class="col-lg-4">
+  <label>Mobile Phone</label>
+  <input type="number" class="form-control" formControlName="MobilePhone">
+</div>
+</div>
+<div class="row form-group mt-5">
+<div class="col-lg-4">
+  <label>Email</label>
+  <input type="text" class="form-control" formControlName="Email">
+</div>
+</div>
+</div>
+<div class="section mb-5">
+  <h4 class="sub-heading">Other Information:</h4>
+<div class="row form-group mt-5">
+  <div class="col-lg-4">
+      <label>Subscription Number</label>
+      <input type="text" class="form-control" formControlName="FirstName">
+  </div>
+  <div class="col-lg-6">
+    <mat-form-field>
+      <label>Area Elder Name</label>
+      <mat-select formControlName="Title">
+        <mat-option [value]="'Alex'">Alex</mat-option>
+        <mat-option [value]="'Felix'">Felix</mat-option>
+        <mat-option [value]="'Memon'">Memon</mat-option>
+      </mat-select>
+    </mat-form-field >
+  </div>
+</div>
+<div class="row form-group mt-5">
+  <div class="col-lg-4">
+      <label>April Subscription</label>
+      <input type="number" class="form-control" formControlName="FirstName">
+  </div>
+  <div class="col-lg-4">
+    <label>May Subscription</label>
+    <input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+  <label>June Subscription</label>
+  <input type="number" class="form-control" formControlName="FirstName">
+</div>
+</div>
+<div class="row form-group mt-5">
+<div class="col-lg-4">
+  <label>July Subscription</label>
+  <input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+  <label>August Subscription</label>
+  <input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+<label>September Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+</div>
+<div class="row form-group mt-5">
+<div class="col-lg-4">
+<label>October Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+<label>November Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+  <label>December Subscription</label>
+  <input type="number" class="form-control" formControlName="FirstName">
+</div>
+</div>
+<div class="row form-group mt-5">
+<div class="col-lg-4">
+<label>January Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+<label>February Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+<div class="col-lg-4">
+<label>March Subscription</label>
+<input type="number" class="form-control" formControlName="FirstName">
+</div>
+</div>
+</div>
+      </div>
+        
+    
+        
+    
+        <button mat-flat-button color="primary" type="submit">Submit</button>
+    </form>
+   
+</div>

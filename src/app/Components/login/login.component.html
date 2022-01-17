@@ -1,0 +1,36 @@
+<div class="jumbotron jumbotron-fluid">
+  
+<div class="container">
+    <h1>Login</h1>
+    <div class="login"> 
+        <form [formGroup] = "login" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <mat-form-field appearance ="outline" >
+                    <mat-icon matPrefix> email</mat-icon>
+                    <mat-label>Email Address</mat-label>
+                    <input type="text" matInput
+                    formControlName="Email"/>
+                    <mat-hint *ngIf="show">I am Hint</mat-hint>
+                </mat-form-field><br>
+                
+            </div>
+            <div class="form-group" style="padding: 10px;">
+                <mat-form-field appearance ="outline">
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <mat-hint *ngIf="show">I am Hint</mat-hint>
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="show?'text':'password'"
+                    formControlName="Password"/>
+                    <mat-icon matSuffix (click)="showPassword()">remove_red_eye</mat-icon> <br>
+                </mat-form-field><br>
+               
+                
+            </div>
+            <button mat-raised-button color="accent"[disabled]="login.invalid">Submit</button>
+        </form>
+        <button mat-raised-button (click)="GetProfile()">Profile</button>
+        {{f.Email.touched}}
+    </div>
+</div>
+<button mat-raised-button (click)="logout()">Logout</button>
+</div>

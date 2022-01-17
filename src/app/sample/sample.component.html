@@ -1,0 +1,45 @@
+<p>sample works!</p>
+<form [formGroup]="sample" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>User Name</mat-label>
+    <input matInput formControlName="name"  />
+   
+</mat-form-field>
+<span *ngIf="sample.controls.name.errors?.pattern" style="color:red;">Pattern error</span><br>
+<mat-form-field appearance="outline">
+  <mat-label>User Name</mat-label>
+  <input matInput formControlName="name"  />
+ 
+</mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="date" formControlName="date">
+  
+</mat-form-field>
+
+
+<span *ngIf="sample.controls.name.errors?.pattern" style="color:red;">Pattern error</span>
+<button mat-raised-button type="submit" color="accent" style="color:cornflowerblue" [disabled]="sample.invalid">Submit</button>
+</form>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">Thomas</div>
+        <div class="col-md-6">Nivas</div>
+    </div>
+</div>ng serve
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div> -->
