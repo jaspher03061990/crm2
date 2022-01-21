@@ -12,6 +12,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
 import { AuthorizationInterceptor } from './Authorization/authorization.interceptor';
 import { AddMembersComponent } from './Components/members/add-members/add-members.component';
+import { AddFamiliesComponent } from './Components/families/add-families/add-families.component';
 import { DisplayMembersComponent } from './Components/members/display-members/display-members.component';
 
 import {MatTableExporterModule } from 'mat-table-exporter';
@@ -28,6 +29,7 @@ import { UpdateMonthlyOfferingsComponent } from './Components/update-monthly-off
     LoginComponent,
     HomeComponent,
     AddMembersComponent,
+    AddFamiliesComponent,
     DisplayMembersComponent,
     ViewMemberDetailsComponent,
     UpdateMonthlyOfferingsComponent,
